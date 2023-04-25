@@ -12,11 +12,11 @@ return {
         folds = true,
       },
       strikethrough = true,
-      invert_selection = false,
-      invert_signs = false,
-      invert_tabline = false,
+      invert_selection = true,
+      invert_signs = true,
+      invert_tabline = true,
       invert_intend_guides = false,
-      inverse = true, -- invert background for search, diffs, statuslines and errors
+      inverse = false, -- invert background for search, diffs, statuslines and errors
       contrast = 'hard', -- can be "hard", "soft" or empty string
       palette_overrides = {},
       overrides = {},
