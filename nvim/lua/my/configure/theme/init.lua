@@ -2,16 +2,21 @@
 
 local M = {}
 
--- Loads what ever theme the user wants. This method must be called in
+-- Loads what ever theme the user wants from this directory
 -- `my.plugins.lua`
+-- Returns
+--  my.configure.theme.onedark
+--  my.configure.theme.gruvbox
 function M.setup()
-  return require('my.configure.theme.gruvbox')
+  return require('my.configure.theme.onedark')
 end
 
 -- Returns the name of the theme.
 -- Method is used in `my.configure.lualine.lua`
+--
+-- Returns: gruvbox, onedark
 function M.name()
-  return 'gruvbox'
+  return 'onedark'
 end
 
 return M
