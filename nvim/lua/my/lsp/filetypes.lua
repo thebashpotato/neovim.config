@@ -80,8 +80,6 @@ end
 -- extras not associated with any one language
 
 table.insert(M.mason_packages, 'codespell')
-
 table.insert(M.treesitter_parsers, 'comment')
-table.insert(M.treesitter_parsers, 'fish')
 
 return M
