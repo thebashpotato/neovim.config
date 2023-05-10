@@ -50,7 +50,7 @@ return {
         format = require('lspkind').cmp_format({ with_text = true }),
       },
       experimental = {
-        ghost_text = true,
+        ghost_text = {},
       },
     }
 
