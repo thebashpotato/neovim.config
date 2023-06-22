@@ -19,6 +19,17 @@
 
 ## Install
 
+1. Get Node/Npm: `curl -fsSL https://fnm.vercel.app/install | bash`
+2. Get Rust: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+
+### Ubuntu
+
+1. Apt: `sudo apt install build-essential cmake python3-pip luarocks wl-clipboard python3.10-venv codespell clang-tools clang-format clangd bear`
+2. Pip: `pip install pynvim cmake-format --user`
+3. Npm: `npm install -g neoovim`
+
+### Neovim Config
+
 There isn't much to install, just copy the `nvim` directory to `~/.config/nvim`.
 But for the sake of commands..
 
