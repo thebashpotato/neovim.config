@@ -2,9 +2,10 @@ return {
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   config = function()
+    local active_theme_name = require('my.configure.theme').name()
     require('lualine').setup({
       options = {
-        theme = require('my.configure.theme').name(),
+        theme = active_theme_name,
         component_separators = '|',
       },
       sections = {

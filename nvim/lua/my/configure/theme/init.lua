@@ -4,19 +4,28 @@ local M = {}
 
 -- Loads what ever theme the user wants from this directory
 -- `my.plugins.lua`
--- Returns
---  my.configure.theme.onedark
---  my.configure.theme.gruvbox
+-- 
+-- Supported theme modules:
+--  * my.configure.theme.onedark
+--  * my.configure.theme.gruvbox
+--  * my.configure.theme.ayu
+--
+-- Returns: table - theme configuration
 function M.setup()
-  return require('my.configure.theme.onedark')
+  return require('my.configure.theme.ayu')
 end
 
 -- Returns the name of the theme.
 -- Method is used in `my.configure.lualine.lua`
+-- 
+-- Supported theme names: 
+--  * onedark
+--  * gruvbox
+--  * ayu
 --
--- Returns: gruvbox, onedark
+-- Returns: string - name of the theme
 function M.name()
-  return 'onedark'
+  return 'ayu'
 end
 
 return M
