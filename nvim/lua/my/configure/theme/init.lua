@@ -9,10 +9,11 @@ local M = {}
 --  * my.configure.theme.gruvbox
 --  * my.configure.theme.ayu
 --  * my.configure.theme.kanagawa
+--  * my.configure.theme.oxocarbon
 --
 -- Returns: table - theme configuration
 function M.setup()
-  return require('my.configure.theme.kanagawa')
+  return require('my.configure.theme.oxocarbon')
 end
 
 -- Returns the name of the theme.
@@ -22,11 +23,12 @@ end
 --  * onedark
 --  * gruvbox
 --  * ayu
---  * auto
+--  * auto -- use this for kanagawa theme
+--  * oxocarbon
 --
 -- Returns: string - name of the theme
 function M.name()
-  return 'auto'
+  return 'oxocarbon'
 end
 
 return M
