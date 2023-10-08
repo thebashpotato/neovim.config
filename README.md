@@ -26,7 +26,7 @@
 
 1. Apt: `sudo apt install build-essential cmake python3-pip luarocks wl-clipboard python3.10-venv codespell clang-tools clang-format clangd bear`
 2. Pip: `pip install pynvim cmake-format --user`
-3. Npm: `npm install -g neoovim`
+3. Npm: `npm install -g neovim`
 
 ### Neovim Config
 
