@@ -13,7 +13,7 @@ local M = {}
 --
 -- Returns: table - theme configuration
 function M.setup()
-  return require('my.configure.theme.gruvbox')
+ return require('my.configure.theme.oxocarbon')
 end
 
 -- Returns the name of the theme.
@@ -28,7 +28,7 @@ end
 --
 -- Returns: string - name of the theme
 function M.name()
-  return 'gruvbox'
+  return 'oxocarbon'
 end
 
 return M
