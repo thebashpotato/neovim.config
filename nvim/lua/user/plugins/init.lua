@@ -19,7 +19,10 @@ return {
   -- LSP and formatting
   require("user.plugins.mason"),
   require("user.plugins.lspconfig"),
-  --require("user.plugins.null-ls"),
+
+  -- Debugging
+  require("user.plugins.dap"),
+  require("user.plugins.dapui"),
 
   -- Ui + Utils
   "nvim-tree/nvim-web-devicons",
