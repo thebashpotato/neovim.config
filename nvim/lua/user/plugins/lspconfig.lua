@@ -5,6 +5,9 @@ local M = {
     {
       "folke/neodev.nvim",
     },
+    {
+      "p00f/clangd_extensions.nvim",
+    },
   },
 }
 
@@ -107,7 +110,13 @@ function M.config()
     end
 
     if server == "lua_ls" then
-      require("neodev").setup {}
+      require("neodev").setup()
+    end
+
+    if server == "clangd" then
+      require("clangd_extensions").setup()
+      require("clangd_extensions.inlay_hints").setup_autocmd()
+      require("clangd_extensions.inlay_hints").set_inlay_hints()
     end
 
     lspconfig[server].setup(opts)
