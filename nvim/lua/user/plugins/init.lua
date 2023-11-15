@@ -35,6 +35,7 @@ return {
   require("user.plugins.toggle-term"),
   require("user.plugins.telescope"),
   require("user.plugins.project"),
+  require("user.plugins.nvim-colorizer"),
 
   -- Version control
   require("user.plugins.neogit"),
