@@ -10,10 +10,11 @@ local M = {}
 --  * ayu
 --  * kanagawa
 --  * oxocarbon
+--  * dracula
 --
 -- Returns: table - theme configuration
 function M.setup()
-  return require('user.plugins.theme.oxocarbon')
+  return require("user.plugins.theme.dracula")
 end
 
 -- Returns the name of the theme.
@@ -25,10 +26,11 @@ end
 --  * ayu
 --  * auto -- use this for kanagawa theme
 --  * oxocarbon
+--  * dracula-nvim
 --
 -- Returns: string - name of the theme
 function M.name()
-  return 'oxocarbon'
+  return "dracula-nvim"
 end
 
 return M
