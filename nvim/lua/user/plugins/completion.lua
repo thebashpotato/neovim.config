@@ -58,7 +58,7 @@ function M.config()
 
   local icons = require "user.utils.icons"
 
-  cmp.setup {
+  cmp.setup ({
     snippet = {
       expand = function(args)
         luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -114,7 +114,7 @@ function M.config()
         vim_item.kind = icons.kind[vim_item.kind]
         vim_item.menu = ({
           nvim_lsp = "[LSP]",
-          nvim_lua = "",
+          nvim_lua = "[VimApi]",
           luasnip = "[Snippet]",
           buffer = "[Buffer]",
           path = "[Path]",
@@ -201,7 +201,7 @@ function M.config()
     experimental = {
       ghost_text = false,
     },
-  }
+  })
 
   pcall(function()
     local function on_confirm_done(...)
