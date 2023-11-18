@@ -1,6 +1,6 @@
 <div align="center">
   <h1>neovim.config</h1>
-  <img src="./assets/neovim-config-1.png">
+  <img src="./assets/banner.png">
 </div>
 <br>
 <div align="center">
