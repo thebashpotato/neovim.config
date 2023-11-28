@@ -23,6 +23,7 @@ local M = {
 }
 function M.config()
   require("nvim-treesitter.configs").setup {
+    auto_install = true,
       -- put the language you want in this array
     ensure_installed = {
       "lua",
@@ -37,6 +38,7 @@ function M.config()
       "javascript",
     },
     ignore_install = { "" },
+    modules = {},
     sync_install = false,
     highlight = {
       enable = true,
@@ -53,7 +55,7 @@ function M.config()
 
     autotag = { enable = true },
 
-    context_commentstring = {
+    ts_context_commentstring = {
       enable = true,
       enable_autocmd = false,
     },
