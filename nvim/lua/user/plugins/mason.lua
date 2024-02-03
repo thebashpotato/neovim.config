@@ -9,6 +9,7 @@ local M = {
 M.servers = {
   "lua_ls",
   "cssls",
+  "tailwindcss",
   "html",
   "tsserver",
   "pyright",
