@@ -2,8 +2,7 @@ local M = {
   'akinsho/bufferline.nvim',
   lazy = false,
   priority = 1000,
-  tags = "*",
-  requires = 'nvim-tree/nvim-web-devicons',
+  dependencies = 'nvim-tree/nvim-web-devicons',
 }
 
 function M.config()
