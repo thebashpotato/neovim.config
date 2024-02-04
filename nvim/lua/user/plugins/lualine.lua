@@ -2,7 +2,7 @@ local M = {
   "nvim-lualine/lualine.nvim",
 }
 
-function M.config_one()
+function M.config()
   local sl_hl = vim.api.nvim_get_hl_by_name("StatusLine", true)
   vim.api.nvim_set_hl(0, "Copilot", { fg = "#6CC644", bg = sl_hl.background })
   local icons = require "user.utils.icons"
@@ -12,7 +12,7 @@ function M.config_one()
     symbols = {
       added = icons.git.LineAdded,
       modified = icons.git.LineModified,
-      removed = icons.git.LineRemoved
+      removed = icons.git.LineRemoved,
     },
   }
 
@@ -21,7 +21,6 @@ function M.config_one()
     if #buf_clients == 0 then
       return "" .. icons.diagnostics.BoldHint .. " LSP Inactive"
     else
-
     end
 
     local buf_client_names = {}
@@ -52,7 +51,7 @@ function M.config_one()
     },
     sections = {
       lualine_a = { "mode" },
-      lualine_b = { {"branch", icon = ""}, },
+      lualine_b = { { "branch", icon = "" } },
       lualine_c = { diff },
       lualine_x = { "diagnostics", diagnostics },
       lualine_y = { "filetype" },
@@ -60,10 +59,6 @@ function M.config_one()
     },
     extensions = { "quickfix", "man", "fugitive" },
   }
-end
-
-function M.config()
-  M.config_one()
 end
 
 return M
