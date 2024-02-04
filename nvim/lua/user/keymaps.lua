@@ -1,6 +1,6 @@
 -- Contains key mappings for builtin vim commands
 
-local opts =  { noremap = true, silent = true }
+local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -55,7 +55,7 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 --              Insert Mode
 -- ----------------------------------------------
 
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
@@ -91,4 +91,3 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
