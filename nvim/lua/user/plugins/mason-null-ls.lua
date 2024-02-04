@@ -10,7 +10,7 @@ local M = {
 function M.config()
   require("mason").setup()
   require("mason-null-ls").setup {
-    ensure_installed = { "stylua" },
+    ensure_installed = { "stylua", "prettier" },
   }
 end
 

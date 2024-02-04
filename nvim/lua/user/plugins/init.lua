@@ -19,6 +19,7 @@ return {
   -- LSP and formatting
   require "user.plugins.mason",
   require "user.plugins.lspconfig",
+  -- require "user.plugins.typescript-tools",
   require "user.plugins.none-ls",
   require "user.plugins.mason-null-ls",
 
