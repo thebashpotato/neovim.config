@@ -18,8 +18,8 @@ function M.config()
       -- Value is any valid attr-list value for `:help nvim_set_hl`
       comments = { italic = true },
       keywords = { italic = true },
-      functions = {},
-      variables = {},
+      functions = { italic = true, underline = true, bold = false },
+      variables = { bold = true },
       -- Background styles. Can be "dark", "transparent" or "normal"
       sidebars = "dark", -- style for sidebars, see below
       floats = "dark", -- style for floating windows
@@ -42,7 +42,7 @@ function M.config()
     on_highlights = function(highlights, colors) end,
   }
 
-  vim.cmd[[colorscheme tokyonight]]
+  vim.cmd [[colorscheme tokyonight]]
 end
 
 return M
