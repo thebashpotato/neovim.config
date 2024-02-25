@@ -48,6 +48,10 @@ vim.opt.formatoptions:remove { "c", "r", "o" } -- don't insert the current comme
 vim.opt.runtimepath:remove "/usr/share/vim/vimfiles" -- separate vim plugins from neovim in case vim still in use
 
 if vim.g.neovide then
+  vim.g.neovide_scroll_animation_length = 0.0
+  vim.g.neovide_scroll_animation_far_lines = 0
+  vim.g.neovide_cursor_animation_length = 0.0
+  vim.g.neovide_cursor_trail_size = 0.0
   vim.g.neovide_floating_shadow = true
   vim.g.neovide_floating_z_height = 10
   vim.g.neovide_padding_top = 0
@@ -57,11 +61,11 @@ if vim.g.neovide then
   vim.g.neovide_light_angle_degrees = 45
   vim.g.neovide_light_radius = 5
   vim.g.neovide_hide_mouse_when_typing = true
-  vim.g.neovide_refresh_rate = 120
-  vim.g.neovide_refresh_rate_idle = 5
+  vim.g.neovide_refresh_rate = 144
+  vim.g.neovide_refresh_rate_idle = 0
   vim.g.neovide_confirm_quit = true
   vim.g.neovide_cursor_antialiasing = true
-  vim.g.neovide_cursor_animate_command_line = true
+  vim.g.neovide_cursor_animate_command_line = false
   vim.g.neovide_unlink_border_highlights = true
   vim.g.neovide_remember_window_size = true
 end
