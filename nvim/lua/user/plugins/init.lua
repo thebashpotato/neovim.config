@@ -32,6 +32,7 @@ return {
   require "user.plugins.nvim-dap-ui",
   require "user.plugins.nvim-dap-virtual-text",
   require "user.plugins.nvim-dap-projects",
+  require "user.plugins.crates",
 
   -- Ui + Utils
   "nvim-tree/nvim-web-devicons",
