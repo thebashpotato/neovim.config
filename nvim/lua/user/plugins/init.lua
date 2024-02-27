@@ -17,15 +17,21 @@ return {
   require "user.plugins.schemastore",
 
   -- LSP and formatting
-  require "user.plugins.mason",
   require "user.plugins.lspconfig",
-  -- require "user.plugins.typescript-tools",
   require "user.plugins.none-ls",
-  require "user.plugins.mason-null-ls",
+  -- require "user.plugins.typescript-tools",
 
-  -- Debugging
-  require "user.plugins.dap",
-  require "user.plugins.dapui",
+  -- Automated Installers for LSPs, Linters, and Debug adapters
+  require "user.plugins.mason",
+  require "user.plugins.mason-null-ls",
+  require "user.plugins.mason-nvim-dap",
+
+  -- Debugging / Devlopment
+  require "user.plugins.neodev",
+  require "user.plugins.nvim-dap",
+  require "user.plugins.nvim-dap-ui",
+  require "user.plugins.nvim-dap-virtual-text",
+  require "user.plugins.nvim-dap-projects",
 
   -- Ui + Utils
   "nvim-tree/nvim-web-devicons",

@@ -170,7 +170,7 @@ function M.config()
     nowait = true, -- use `nowait` when creating keymaps
   }
 
-  local which_key = require("which-key")
+  local which_key = require "which-key"
 
   which_key.setup {
     plugins = {
