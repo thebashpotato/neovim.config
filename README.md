@@ -46,7 +46,7 @@ nvim
 
 ## Usage
 
-TODO: Fill out docs later
+See the [Dap configs](./dap-configs) for per-project language configurations.
 
 ## Maintainers
 
