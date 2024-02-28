@@ -15,7 +15,7 @@ local M = {
 function M.config()
   local icons = require "user.utils.icons"
   local actions = require "telescope.actions"
-
+  
   require("telescope").setup {
     defaults = {
       prompt_prefix = icons.ui.Telescope .. " ",
