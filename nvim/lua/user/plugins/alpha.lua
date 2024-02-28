@@ -4,21 +4,43 @@ local M = {
 }
 
 function M.config()
-  local dashboard = require("alpha.themes.dashboard")
+  local dashboard = require "alpha.themes.dashboard"
   local icons = require "user.utils.icons"
 
-  -- First class function to build a button 
+  -- First class function to build a button
   local function button(sc, txt, keybind, keybind_opts)
     local b = dashboard.button(sc, txt, keybind, keybind_opts)
     b.opts.hl_shortcut = "Macro"
     return b
   end
-  
+
   dashboard.section.header.val = {
-    [[🛸　　　 　🌎　°　　🌓　•　　.°•　　　🚀 ✯   ]],
-    [[　　　★　*　　　　　°　　　　🛰 　°·      🪐 ]],
-    [[.　　　•　° ★　•  ☄                          ]],
-    [[                 ▁▂▃▄▅▆▇▇▆▅▄▃▂▁.             ]],
+[[                 ____                                         ]],
+[[                /___.`--.____ .--. ____.--(                   ]],
+[[                       .'_.- (    ) -._'.                     ]],
+[[                     .'.'    |'..'|    '.'.                   ]],
+[[              .-.  .' /'--.__|____|__.--'\ '.  .-.            ]],
+[[             (O).)-| |  \    |    |    /  | |-(.(O)           ]],
+[[              `-'  '-'-._'-./      \.-'_.-'-'  `-'            ]],
+[[                 _ | |   '-.________.-'   | | _               ]],
+[[              .' _ | |     |   __   |     | | _ '.            ]],
+[[             / .' ''.|     | /    \ |     |.'' '. \           ]],
+[[             | |( )| '.    ||      ||    .' |( )| |           ]],
+[[             \ '._.'   '.  | \    / |  .'   '._.' /           ]],
+[[              '.__ ______'.|__'--'__|.'______ __.'            ]],
+[[             .'_.-|         |------|         |-._'.           ]],
+[[            //\\  |         |--::--|         |  //\\          ]],
+[[           //  \\ |         |--::--|         | //  \\         ]],
+[[          //    \\|        /|--::--|\        |//    \\        ]],
+[[         / '._.-'/|_______/ |--::--| \_______|\`-._.' \       ]],
+[[        / __..--'        /__|--::--|__\        `--..__ \      ]],
+[[       / /               '-.|--::--|.-'               \ \     ]],
+[[      / /                   |--::--|                   \ \    ]],
+[[     / /                    |--::--|                    \ \   ]],
+[[ _.-'  `-._                 _..||.._                  _.-` '-._ ]],
+[['--..__..--' LGB           '-.____.-'                '--..__..-']],
+
+
   }
 
   dashboard.section.buttons.val = {
@@ -40,7 +62,7 @@ function M.config()
   dashboard.opts.opts.noautocmd = true
 
   require("alpha").setup(dashboard.opts)
-  
+
   vim.api.nvim_create_autocmd("User", {
     pattern = "LazyVimStarted",
     callback = function()
