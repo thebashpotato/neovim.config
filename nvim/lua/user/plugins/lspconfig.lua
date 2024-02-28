@@ -18,7 +18,7 @@ local function lsp_keymaps(buffer_number)
   local keymap = vim.api.nvim_buf_set_keymap
   keymap(buffer_number, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   keymap(buffer_number, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  keymap(buffer_number, "n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  keymap(buffer_number, "n", "<S-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
   keymap(buffer_number, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   keymap(buffer_number, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   keymap(buffer_number, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
