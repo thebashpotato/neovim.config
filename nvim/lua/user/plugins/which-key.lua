@@ -8,7 +8,6 @@ function M.config()
     ["q"] = { "<cmd>confirm q<CR>", "Quit" },
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-    ["."] = { "<cmd>Telescope file_browser<cr>", "Open File Browser" },
     [","] = { "<cmd>Telescope find_files<cr>", "Find files" },
 
     b = {
@@ -52,7 +51,7 @@ function M.config()
       t = { "<cmd>Telescope live_grep<cr>", "Find Text/Pattern" },
       s = { "<cmd>Telescope grep_string<cr>", "Find Specific String" },
       b = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search Current Buffer" },
-      g = { "<cmd>Telescope git_files<cr>", "Search files that are registered in git for this project" },
+      g = { "<cmd>Telescope git_files<cr>", "Search Git Files" },
       h = { "<cmd>Telescope help_tags<cr>", "Help" },
       p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
       H = { "<cmd>Telescope highlights<cr>", "Highlights" },
