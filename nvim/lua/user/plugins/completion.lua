@@ -58,7 +58,7 @@ function M.config()
 
   local icons = require "user.utils.icons"
 
-  cmp.setup ({
+  cmp.setup {
     snippet = {
       expand = function(args)
         luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -201,7 +201,7 @@ function M.config()
     experimental = {
       ghost_text = false,
     },
-  })
+  }
 
   pcall(function()
     local function on_confirm_done(...)

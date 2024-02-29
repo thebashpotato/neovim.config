@@ -4,7 +4,7 @@ local M = {
 }
 
 function M.config()
-  require("nvim-autopairs").setup({
+  require("nvim-autopairs").setup {
     map_char = {
       all = "(",
       tex = "{",
@@ -35,7 +35,7 @@ function M.config()
       highlight = "Search",
       highlight_grey = "Comment",
     },
-  })
+  }
 end
 
 return M

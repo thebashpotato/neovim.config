@@ -1,6 +1,6 @@
 return {
   settings = {
-    ['rust-analyzer'] = {
+    ["rust-analyzer"] = {
       procMacro = {
         enabled = true,
       },
@@ -13,7 +13,7 @@ return {
         },
       },
       checkOnSave = {
-        command = 'clippy',
+        command = "clippy",
       },
       check = {
         overrideCommand = {
@@ -34,12 +34,12 @@ return {
             "--target-dir=target_ra",
             "--workspace",
             "--message-format=json",
-            "--all-targets"
+            "--all-targets",
           },
         },
       },
       diagnostics = {
-        disabled = { 'inactive-code' },
+        disabled = { "inactive-code" },
       },
       files = {
         excludeDirs = {

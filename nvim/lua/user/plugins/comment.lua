@@ -1,10 +1,10 @@
 local M = {
-    'numToStr/Comment.nvim',
-    lazy = false,
+  "numToStr/Comment.nvim",
+  lazy = false,
 }
 
 function M.config()
-    require("Comment").setup()
+  require("Comment").setup()
 end
 
 return M

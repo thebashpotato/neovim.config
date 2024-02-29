@@ -1,20 +1,20 @@
 local M = {
-  'nvim-tree/nvim-tree.lua',
+  "nvim-tree/nvim-tree.lua",
   cmd = {
-    'NvimTreeClipboard',
-    'NvimTreeClose',
-    'NvimTreeFindFile',
-    'NvimFreeFindFileToggle',
-    'NvimTreeFocus',
-    'NvimTreeOpen',
-    'NvimTreeRefresh',
-    'NvimTreeResize',
-    'NvimTreeToggle',
-  }
+    "NvimTreeClipboard",
+    "NvimTreeClose",
+    "NvimTreeFindFile",
+    "NvimFreeFindFileToggle",
+    "NvimTreeFocus",
+    "NvimTreeOpen",
+    "NvimTreeRefresh",
+    "NvimTreeResize",
+    "NvimTreeToggle",
+  },
 }
 
 function M.config()
-  require('nvim-tree').setup({
+  require("nvim-tree").setup {
     filters = {
       dotfiles = false,
     },
@@ -29,7 +29,7 @@ function M.config()
     },
     view = {
       adaptive_size = false,
-      side = 'left',
+      side = "left",
       width = 35,
     },
     filesystem_watchers = {
@@ -37,7 +37,7 @@ function M.config()
     },
     renderer = {
       highlight_git = true,
-      highlight_opened_files = 'none',
+      highlight_opened_files = "none",
       indent_markers = {
         enable = false,
       },
@@ -50,7 +50,7 @@ function M.config()
         },
       },
     },
-  })
+  }
 end
 
 return M

@@ -1,9 +1,9 @@
 return {
-  'rebelot/kanagawa.nvim',
+  "rebelot/kanagawa.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require('kanagawa').setup({
+    require("kanagawa").setup {
       compile = true, -- enable compiling the colorscheme
       undercurl = true, -- enable undercurls
       commentStyle = { italic = true },
@@ -22,7 +22,7 @@ return {
           dragon = {},
           all = {
             ui = {
-              bg_gutter = 'none',
+              bg_gutter = "none",
             },
           },
         },
@@ -39,12 +39,12 @@ return {
           TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
         }
       end,
-      theme = 'wave', -- Load "wave" theme when 'background' option is not set
+      theme = "wave", -- Load "wave" theme when 'background' option is not set
       background = { -- map the value of 'background' option to a theme
-        dark = 'dragon', -- try "dragon" !
-        light = 'lotus',
+        dark = "dragon", -- try "dragon" !
+        light = "lotus",
       },
-    })
-    require('kanagawa').load('dragon')
+    }
+    require("kanagawa").load "dragon"
   end,
 }

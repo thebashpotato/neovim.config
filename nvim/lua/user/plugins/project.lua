@@ -17,7 +17,7 @@ function M.config()
       ".svn",
       "Makefile",
       "package.json",
-      "pom.xml"
+      "pom.xml",
     },
     ignore_lsp = {},
     exclude_dirs = {},
