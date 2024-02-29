@@ -11,6 +11,7 @@ return {
   require "user.plugins.comment",
   require "user.plugins.markdown-preview",
   require "user.plugins.bufdelete",
+  require "user.plugins.harpoon",
 
   -- Completion and Snippets
   require "user.plugins.completion",

@@ -7,7 +7,7 @@ function M.config()
   local mappings = {
     ["q"] = { "<cmd>confirm q<CR>", "Quit" },
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment" },
-    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    ["c"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     [","] = { "<cmd>Telescope find_files<cr>", "Find files" },
 
     b = {
@@ -121,21 +121,6 @@ function M.config()
       name = "Utils",
       t = { "<cmd>ToggleTerm<cr>", "Toggle Terminal" },
       p = { "<cmd>NvimTreeToggle<cr>", "File Explorer" },
-    },
-
-    t = {
-      name = "Tab",
-      t = {
-        "<cmd>lua require('telescope').extensions['telescope-tabs'].list_tabs(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Tabs'})<cr>",
-        "Find Tab",
-      },
-      a = { "<cmd>$tabnew<cr>", "New Empty Tab" },
-      A = { "<cmd>tabnew %<cr>", "New Tab" },
-      n = { "<cmd>tabn<cr>", "Next" },
-      o = { "<cmd>tabonly<cr>", "Only" },
-      p = { "<cmd>tabp<cr>", "Prev" },
-      h = { "<cmd>-tabmove<cr>", "Move Left" },
-      l = { "<cmd>+tabmove<cr>", "Move Right" },
     },
 
     T = {
