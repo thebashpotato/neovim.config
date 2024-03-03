@@ -22,12 +22,6 @@ function M.config()
   dap.listeners.before.event_exited["dapui_config"] = function()
     dapui.close()
   end
-
-  dap.adapters.lldb = {
-    type = "executable",
-    command = "lldb-vscode",
-    name = "lldb",
-  }
 end
 
 return M
