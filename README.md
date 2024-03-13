@@ -48,6 +48,9 @@ nvim
 
 See the [Dap configs](./dap-configs) for per-project language configurations.
 
+> Copy `./dap-configs/nvim-dap-cpp.lua` to `your_project/.nvim-dap.lua` and update  and update 
+> the dap.configurations.<lang> to match your binary.
+
 ## Maintainers
 
 [@thebashpotato](https://github.com/thebashpotato)
