@@ -66,13 +66,13 @@ function M.config()
     g = {
       name = "Git",
       g = { "<cmd>Neogit<cr>", "Neogit" },
-      j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
-      k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
-      l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-      p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-      r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-      R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-      s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+      j = { "<cmd>lua require('gitsigns').next_hunk({navigation_message = false})<cr>", "Next Hunk" },
+      k = { "<cmd>lua require('gitsigns').prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
+      l = { "<cmd>lua require('gitsigns').blame_line()<cr>", "Blame" },
+      p = { "<cmd>lua require('gitsigns').preview_hunk()<cr>", "Preview Hunk" },
+      r = { "<cmd>lua require('gitsigns').reset_hunk()<cr>", "Reset Hunk" },
+      R = { "<cmd>lua require('gitsigns').reset_buffer()<cr>", "Reset Buffer" },
+      s = { "<cmd>lua require('gitsigns').stage_hunk()<cr>", "Stage Hunk" },
       u = {
         "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
         "Undo Stage Hunk",
@@ -121,6 +121,10 @@ function M.config()
       name = "Utils",
       t = { "<cmd>ToggleTerm<cr>", "Toggle Terminal" },
       p = { "<cmd>NvimTreeToggle<cr>", "File Explorer" },
+      a = { "<cmd>lua require('telescope').extensions.vstask.tasks()<cr>", "Tasks" },
+      i = { "<cmd>lua require('telescope').extensions.vstask.inputs()<cr>", "Task Inputs" },
+      h = { "<cmd>lua require('telescope').extensions.vstask.history()<cr>", "Task History" },
+      l = { "<cmd>lua require('telescope').extensions.vstask.launch()<cr>", "Task Launcher" },
     },
 
     T = {
