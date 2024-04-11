@@ -121,10 +121,7 @@ function M.config()
       name = "Utils",
       t = { "<cmd>ToggleTerm<cr>", "Toggle Terminal" },
       p = { "<cmd>NvimTreeToggle<cr>", "File Explorer" },
-      a = { "<cmd>lua require('telescope').extensions.vstask.tasks()<cr>", "Tasks" },
-      i = { "<cmd>lua require('telescope').extensions.vstask.inputs()<cr>", "Task Inputs" },
-      h = { "<cmd>lua require('telescope').extensions.vstask.history()<cr>", "Task History" },
-      l = { "<cmd>lua require('telescope').extensions.vstask.launch()<cr>", "Task Launcher" },
+      b = { "<cmd>lua require('telescope').extensions.vstask.tasks()<cr>", "Tasks" },
     },
 
     T = {
