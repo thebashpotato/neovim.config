@@ -10,7 +10,7 @@ local M = {
 function M.config()
   require("vstask").setup {
     harpoon = true,
-    cache_json_conf = true,
+    cache_json_conf = false,
     terminal = "toggleterm",
     json_parser = require("json5").parse,
   }
