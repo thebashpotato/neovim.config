@@ -3,13 +3,8 @@ local M = {
   "nvim-neotest/nvim-nio",
   event = "VeryLazy",
   dependencies = {
-    {
-      "mfussenegger/nvim-dap",
-      event = "VeryLazy",
-    },
-    {
-      "folke/neodev.nvim",
-    },
+    "mfussenegger/nvim-dap",
+    "nvim-neotest/nvim-nio",
   },
 }
 
