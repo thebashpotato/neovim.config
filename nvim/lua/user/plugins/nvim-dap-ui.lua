@@ -1,7 +1,5 @@
 local M = {
   "rcarriga/nvim-dap-ui",
-  "nvim-neotest/nvim-nio",
-  event = "VeryLazy",
   dependencies = {
     "mfussenegger/nvim-dap",
     "nvim-neotest/nvim-nio",
