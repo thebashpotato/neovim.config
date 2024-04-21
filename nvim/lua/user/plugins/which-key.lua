@@ -98,15 +98,14 @@ function M.config()
       f = { "<cmd>lua vim.lsp.buf.format({timeout_ms = 1000000})<cr>", "Format" },
       i = { "<cmd>LspInfo<cr>", "Info" },
       I = { "<cmd>Mason<cr>", "Mason Info" },
-      j = {
+      l = {
         "<cmd>lua vim.diagnostic.goto_next()<cr>",
         "Next Diagnostic",
       },
-      k = {
+      h = {
         "<cmd>lua vim.diagnostic.goto_prev()<cr>",
         "Prev Diagnostic",
       },
-      l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
       q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
       r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
       s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
