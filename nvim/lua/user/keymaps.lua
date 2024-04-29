@@ -55,10 +55,6 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 --              Insert Mode
 -- ----------------------------------------------
 
--- Press jk fast to exit insert mode
-keymap("i", "jk", "<ESC>", opts)
-keymap("i", "kj", "<ESC>", opts)
-
 -------------------------------------------------
 --              Visual Mode
 -- ----------------------------------------------
