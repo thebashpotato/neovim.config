@@ -121,6 +121,7 @@ function M.config()
       t = { "<cmd>ToggleTerm<cr>", "Toggle Terminal" },
       p = { "<cmd>NvimTreeToggle<cr>", "File Explorer" },
       b = { "<cmd>lua require('telescope').extensions.vstask.tasks()<cr>", "Tasks" },
+      f = { "<cmd>TodoQuickFix<cr>", "Quick Fix List" },
     },
 
     T = {

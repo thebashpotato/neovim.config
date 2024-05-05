@@ -49,6 +49,7 @@ return {
   require "user.plugins.telescope",
   require "user.plugins.project",
   require "user.plugins.nvim-colorizer",
+  require "user.plugins.todo-comments",
 
   -- Version control
   require "user.plugins.neogit",
