@@ -15,7 +15,7 @@ local M = {}
 --
 -- Returns: table - theme configuration
 function M.setup()
-  return require "user.plugins.theme.gruvbox"
+  return require "user.plugins.theme.doom-one"
 end
 
 -- Returns the name of the theme.
@@ -29,10 +29,11 @@ end
 --  * oxocarbon
 --  * dracula-nvim
 --  * tokyonight
+--  * doom-one
 --
 -- Returns: string - name of the theme
 function M.name()
-  return "gruvbox"
+  return "doom-one"
 end
 
 return M
