@@ -35,7 +35,7 @@ local options = {
   linebreak = true, -- companion to wrap, don't split words
   scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
-  guifont = "CaskaydiaCove Nerd Font Mono:h14", -- the font used in graphical neovim applications
+  guifont = "CaskaydiaCove Nerd Font Mono:h12", -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl", -- which "horizontal" keys are allowed to travel to prev/next line
 }
 
@@ -50,7 +50,7 @@ vim.opt.formatoptions:remove { "c", "r", "o" } -- don't insert the current comme
 vim.opt.runtimepath:remove "/usr/share/vim/vimfiles" -- separate vim plugins from neovim in case vim still in use
 
 if vim.g.neovide then
-  vim.g.neovide_scroll_animation_length = 0.3
+  vim.g.neovide_scroll_animation_length = 0.1
   vim.g.neovide_scroll_animation_far_lines = 1.00
   vim.g.neovide_cursor_animation_length = 0.1
   vim.g.neovide_cursor_trail_size = 0.0

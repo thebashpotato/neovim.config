@@ -15,7 +15,7 @@ local M = {}
 --
 -- Returns: table - theme configuration
 function M.setup()
-  return require "user.plugins.theme.tokyonight"
+  return require "user.plugins.theme.gruvbox"
 end
 
 -- Returns the name of the theme.
@@ -32,7 +32,7 @@ end
 --
 -- Returns: string - name of the theme
 function M.name()
-  return "tokyonight"
+  return "gruvbox"
 end
 
 return M
