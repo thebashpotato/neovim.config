@@ -50,6 +50,7 @@ return {
   require "user.plugins.project",
   require "user.plugins.nvim-colorizer",
   require "user.plugins.todo-comments",
+  require "user.plugins.headlines",
 
   -- Version control
   require "user.plugins.neogit",
