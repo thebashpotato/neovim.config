@@ -122,6 +122,7 @@ function M.config()
       p = { "<cmd>NvimTreeToggle<cr>", "File Explorer" },
       b = { "<cmd>lua require('telescope').extensions.vstask.tasks()<cr>", "Tasks" },
       f = { "<cmd>TodoQuickFix<cr>", "Quick Fix List" },
+      z = { "<cmd>ZenMode<cr>", "Distraction free programming" },
     },
 
     T = {

@@ -12,6 +12,7 @@ return {
   require "user.plugins.markdown-preview",
   require "user.plugins.bufdelete",
   require "user.plugins.harpoon",
+  require "user.plugins.zen-mode",
 
   -- Completion and Snippets
   require "user.plugins.completion",
