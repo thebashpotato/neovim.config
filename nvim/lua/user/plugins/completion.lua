@@ -1,7 +1,8 @@
+---@diagnostic disable: missing-fields
 local M = {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
-  commit = "d3a3056204e1a9dbb7c7fe36c114dc43b681768c",
+  -- commit = "d3a3056204e1a9dbb7c7fe36c114dc43b681768c",
   dependencies = {
     {
       "hrsh7th/cmp-nvim-lsp",
@@ -109,6 +110,7 @@ function M.config()
       }),
     },
     formatting = {
+      expandable_indicator = true,
       fields = { "kind", "abbr", "menu" },
       format = function(entry, vim_item)
         vim_item.kind = icons.kind[vim_item.kind]
@@ -194,6 +196,7 @@ function M.config()
         scrolloff = 8,
       },
       documentation = {
+        scrollbar = true,
         border = "rounded",
         winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,Search:None",
       },
