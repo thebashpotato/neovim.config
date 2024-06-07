@@ -35,7 +35,7 @@ local options = {
   linebreak = true, -- companion to wrap, don't split words
   scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
-  guifont = "NotoSansM Nerd Font Mono:h12", -- the font used in graphical neovim applications
+  guifont = "NotoSansM NF:h10", -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl", -- which "horizontal" keys are allowed to travel to prev/next line
 }
 
@@ -52,9 +52,9 @@ vim.cmd "filetype plugin indent on"
 vim.g.tex_flavor = "latex"
 
 if vim.g.neovide then
-  vim.g.neovide_scroll_animation_length = 0.1
-  vim.g.neovide_scroll_animation_far_lines = 1.00
-  vim.g.neovide_cursor_animation_length = 0.1
+  vim.g.neovide_scroll_animation_length = 0.0
+  vim.g.neovide_scroll_animation_far_lines = 0.0
+  vim.g.neovide_cursor_animation_length = 0.0
   vim.g.neovide_cursor_trail_size = 0.0
   vim.g.neovide_floating_shadow = true
   vim.g.neovide_floating_z_height = 10
