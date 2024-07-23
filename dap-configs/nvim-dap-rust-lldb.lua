@@ -1,18 +1,18 @@
 local dap = require("dap")
 
 dap.adapters.lldb = {
-	type = "executable",
-	command = "lldb-vscode",
-	name = "lldb",
+  type = "executable",
+  command = "/usr/bin/lldb-dap",
+  name = "lldb"
 }
 
-dap.configurations.cpp = {
+dap.configurations.rust = {
 	{
-		name = "Launch main application",
+		name = "Launch <name>",
 		type = "lldb",
 		request = "launch",
 		program = function()
-			return vim.fn.getcwd() .. "/build/app/app"
+			return vim.fn.getcwd() .. "/target/debug/<executable>"
 		end,
 		cwd = "${workspaceFolder}",
 		stopOnEntry = false,
