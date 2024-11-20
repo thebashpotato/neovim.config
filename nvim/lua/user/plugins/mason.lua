@@ -12,7 +12,6 @@ function M.config()
     "cssls",
     "tailwindcss",
     "html",
-    "tsserver",
     "pyright",
     "bashls",
     "jsonls",
