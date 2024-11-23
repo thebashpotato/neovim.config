@@ -12,10 +12,12 @@ local M = {}
 --  * oxocarbon
 --  * dracula
 --  * tokyonight
+--  * doom-one
+--  * bluloco
 --
 -- Returns: table - theme configuration
 function M.setup()
-  return require "user.plugins.theme.gruvbox"
+  return require "user.plugins.theme.bluloco"
 end
 
 -- Returns the name of the theme.
@@ -25,7 +27,7 @@ end
 --  * onedark
 --  * gruvbox
 --  * ayu
---  * auto -- use this for kanagawa theme
+--  * auto -- use this for kanagawa and bluloco themes
 --  * oxocarbon
 --  * dracula-nvim
 --  * tokyonight
@@ -33,7 +35,7 @@ end
 --
 -- Returns: string - name of the theme
 function M.name()
-  return "gruvbox"
+  return "auto"
 end
 
 return M
