@@ -9,15 +9,10 @@ local M = {
 function M.config()
   local servers = {
     "lua_ls",
-    "cssls",
-    "tailwindcss",
-    "html",
     "pyright",
     "bashls",
     "jsonls",
     "marksman",
-    "rust_analyzer",
-    "clangd",
     "cmake",
   }
 

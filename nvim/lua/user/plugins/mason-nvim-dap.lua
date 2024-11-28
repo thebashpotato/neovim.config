@@ -13,7 +13,6 @@ function M.config()
   local debug_servers = {
     "codelldb", -- lldb
     "cppdbg", -- lldb
-    "js",
     "python",
     "bash",
   }
