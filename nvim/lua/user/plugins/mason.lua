@@ -13,7 +13,6 @@ function M.config()
     "bashls",
     "jsonls",
     "marksman",
-    "cmake",
   }
 
   require("mason").setup {
