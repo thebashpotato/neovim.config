@@ -17,7 +17,7 @@ local M = {}
 --
 -- Returns: table - theme configuration
 function M.setup()
-  return require "user.plugins.theme.bluloco"
+  return require "user.plugins.theme.kanagawa"
 end
 
 -- Returns the name of the theme.
