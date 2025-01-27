@@ -21,7 +21,6 @@ return {
   -- LSP and formatting
   require "user.plugins.lspconfig",
   require "user.plugins.none-ls",
-  -- require "user.plugins.typescript-tools",
 
   -- Automated Installers for LSPs, Linters, and Debug adapters
   require "user.plugins.mason",
