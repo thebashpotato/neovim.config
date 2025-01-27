@@ -36,7 +36,7 @@ ConfigManager = {
 ---  * bluloco
 function ConfigManager:set_theme(name)
   local helper_functions = require "user.utils.helpers"
-  if helper_functions.is_in_array(name, self.supported_themes) then
+  if type(name) == "string" and helper_functions.is_in_array(name, self.supported_themes) then
     self.active_theme = name
   else
     vim.notify("Specified theme: " .. name .. " is not recognized.")
