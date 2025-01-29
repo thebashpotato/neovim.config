@@ -9,6 +9,8 @@
   <p>A modern <b>neovim</b> config  written in Lua for low level programmers</p>
 </div>
 
+ 
+
 ## Table of Contents
 
 - [Install](#install)
@@ -33,7 +35,7 @@
 There isn't much to install, just copy the `nvim` directory to `~/.config/nvim`.
 But for the sake of commands..
 
-```
+```bash
 # clone the repo to home
 git clone --depth 1 https://github.com/thebashpotato/neovim.config.git ~/
 

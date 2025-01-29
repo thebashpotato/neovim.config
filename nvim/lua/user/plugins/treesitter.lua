@@ -22,21 +22,10 @@ local M = {
   },
 }
 function M.config()
+  local config = require "user.managers.config_man"
   require("nvim-treesitter.configs").setup {
     auto_install = true,
-    -- put the language you want in this array
-    ensure_installed = {
-      "lua",
-      "markdown",
-      "markdown_inline",
-      "bash",
-      "python",
-      "c",
-      "cpp",
-      "rust",
-      "typescript",
-      "javascript",
-    },
+    ensure_installed = config:get_treesitter_parsers(),
     ignore_install = { "" },
     modules = {},
     sync_install = false,

@@ -8,9 +8,10 @@ local M = {
 }
 
 function M.config()
+  local config = require "user.managers.config_man"
+
   require("mason").setup()
   require("mason-null-ls").setup {
-    automatic_installation = false,
     ignore_methods = {
       diagnostics = false,
       formatting = false,
@@ -26,7 +27,8 @@ function M.config()
       hover = true,
     },
     handlers = nil,
-    ensure_installed = { "stylua", "prettier" },
+    automatic_installation = true,
+    ensure_installed = config:get_non_lsp_sources(),
   }
 end
 

@@ -1,5 +1,5 @@
 vim.cmd [[
-  autocmd BufNewFile,BufRead justfile set filetype=make
+  autocmd BufNewFile,BufRead justfile set filetype=just
   ]]
 
 vim.api.nvim_create_autocmd("FileType", {

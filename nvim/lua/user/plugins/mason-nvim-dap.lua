@@ -1,4 +1,4 @@
--- This plugin only install the appropriate debug adapter protocol interface,
+-- This plugin only installs the appropriate debug adapter protocol interface,
 -- however it does not install the debug server itself, nor does any nvim plugin.
 -- It is not the job of an editor plugin to reinvent package management. Each debug server
 -- must be installed on each machine
@@ -8,17 +8,10 @@ local M = {
 }
 
 function M.config()
-  -- Ensure these debug servers are automatically
-  -- installed.
-  local debug_servers = {
-    "codelldb", -- lldb
-    "cppdbg", -- lldb
-    "python",
-    "bash",
-  }
+  local config = require "user.managers.config_man"
 
   require("mason-nvim-dap").setup {
-    ensure_installed = debug_servers,
+    ensure_installed = config:get_debug_adapters(),
     automatic_installation = true,
   }
 end

@@ -3,8 +3,6 @@ local M = {
 }
 
 function M.config()
-  local sl_hl = vim.api.nvim_get_hl_by_name("StatusLine", true)
-  vim.api.nvim_set_hl(0, "Copilot", { fg = "#6CC644", bg = sl_hl.background })
   local icons = require "user.utils.icons"
   local diff = {
     "diff",
@@ -20,26 +18,23 @@ function M.config()
     local buf_clients = vim.lsp.get_active_clients { bufnr = 0 }
     if #buf_clients == 0 then
       return "" .. icons.diagnostics.BoldHint .. " LSP Inactive"
-    else
     end
 
     local buf_client_names = {}
-    local copilot_active = false
     local client_name = ""
+
     for _, client in pairs(buf_clients) do
-      if client.name ~= "null-ls" and client.name ~= "copilot" then
+      if #buf_clients == 1 and client.name == "null-ls" then
+        client_name = client.name
+        break
+      end
+
+      if client.name ~= "null-ls" then
         table.insert(buf_client_names, client.name)
+        client_name = client.name
       end
-
-      if client.name == "copilot" then
-        copilot_active = true
-      end
-      client_name = client.name
     end
 
-    if copilot_active then
-      return "%#Copilot#" .. icons.git.Octoface .. "%*"
-    end
     return "" .. icons.ui.Circle .. client_name .. " Active"
   end
 
