@@ -3,11 +3,10 @@ local M = {
   dependencies = {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
+      build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
       lazy = true,
     },
   },
-  -- commit = "74ce793a60759e3db0d265174f137fb627430355",
   lazy = false,
   cmd = "Telescope",
 }
