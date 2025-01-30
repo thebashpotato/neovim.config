@@ -34,12 +34,10 @@ return {
   require "user.plugins.nvim-dap-virtual-text",
   require "user.plugins.nvim-dap-projects",
   require "user.plugins.crates",
-  require "user.plugins.vs-tasks",
   require "user.plugins.vimtex",
 
   -- Ui + Utils
   "nvim-tree/nvim-web-devicons",
-  require "user.plugins.json5",
   require("user.plugins.theme").setup(),
   require "user.plugins.alpha",
   require "user.plugins.lualine",
