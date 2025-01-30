@@ -39,6 +39,11 @@ local options = {
   whichwrap = "bs<>[]hl", -- which "horizontal" keys are allowed to travel to prev/next line
 }
 
+-- vim.o.shell = "nu"
+-- vim.o.shellcmdflag = "-c"
+-- vim.o.shellquote = ""
+-- vim.o.shellxquote = ""
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
