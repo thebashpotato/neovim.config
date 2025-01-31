@@ -1,7 +1,7 @@
 local config = require "user.managers.config_man"
 
 ---  Theme
-config:set_theme "noctishc"
+config:set_theme "onedark"
 
 --- Misc plugin configuration
 config:set_toggle_term_direction "horizontal"
@@ -60,3 +60,4 @@ config:add_treesitter_parser "ron"
 config:add_treesitter_parser "yaml"
 config:add_treesitter_parser "zathurarc"
 config:add_treesitter_parser "xresources"
+config:add_treesitter_parser "nu"

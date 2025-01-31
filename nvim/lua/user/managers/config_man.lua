@@ -26,6 +26,7 @@ local M = {
     "lackluster",
     "catpuccin",
     "noctishc",
+    "sonokai",
   },
   lsp_configs = {},
   debug_adapters = {},
@@ -49,6 +50,7 @@ local M = {
 ---  * lackluster
 ---  * catpuccin
 ---  * noctishc
+---  * sonokai
 function M:set_theme(name)
   local helper_func = require "user.utils.helpers"
   if type(name) == "string" and helper_func.is_in_array(name, self.supported_themes) then
