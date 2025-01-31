@@ -59,5 +59,4 @@ return {
   require "user.plugins.breadcrumbs",
   require "user.plugins.indentline",
   require "user.plugins.illuminate",
-  require "user.plugins.rainbow-delimiters",
 }

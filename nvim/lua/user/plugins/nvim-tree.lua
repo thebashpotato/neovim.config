@@ -24,7 +24,7 @@ function M.config()
       update_root = false,
     },
     view = {
-      width = 40,
+      width = 30,
       preserve_window_proportions = true,
     },
     renderer = {
