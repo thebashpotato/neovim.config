@@ -7,10 +7,11 @@ function M.config()
   local wk = require "which-key"
 
   wk.add {
+    { "<C-n>", "<cmd>NvimTreeToggle<cr>", desc = "File Explorer" },
+    { "<C-i>", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
+
     -- Top-level mappings
     { "<leader>q", "<cmd>confirm q<CR>", desc = "Quit" },
-    { "<leader>/", "<Plug>(comment_toggle_linewise_current)", desc = "Comment Single Line" },
-    { "<leader>//", "<Plug>(comment_toggle_linewise_visual)", desc = "Comment Block", mode = "v" },
     { "<leader>c", "<cmd>nohlsearch<CR>", desc = "No Highlight" },
     { "<leader>,", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
 
@@ -105,9 +106,6 @@ function M.config()
 
     -- Utils
     { "<leader>o", group = "Utils" },
-    { "<leader>ot", "<cmd>ToggleTerm<cr>", desc = "Toggle Terminal" },
-    { "<leader>op", "<cmd>NvimTreeToggle<cr>", desc = "File Explorer" },
-    { "<leader>ob", "<cmd>lua require('telescope').extensions.vstask.tasks()<cr>", desc = "Tasks" },
     { "<leader>of", "<cmd>TodoQuickFix<cr>", desc = "Quick Fix List" },
     { "<leader>oz", "<cmd>ZenMode<cr>", desc = "Distraction free programming" },
 

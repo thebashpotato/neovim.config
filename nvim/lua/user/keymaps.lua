@@ -19,6 +19,10 @@ vim.g.maplocalleader = " "
 -- term_mode = "t",
 -- command_mode = "c",
 
+-- Comment
+vim.keymap.set("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
+vim.keymap.set("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
+
 -------------------------------------------------
 --              Normal Mode
 -- ----------------------------------------------

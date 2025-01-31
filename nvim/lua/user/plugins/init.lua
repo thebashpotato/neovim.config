@@ -8,7 +8,6 @@ return {
 
   -- Editing enhancements and tools
   require "user.plugins.autopairs",
-  require "user.plugins.comment",
   require "user.plugins.markdown-preview",
   require "user.plugins.bufdelete",
   require "user.plugins.harpoon",
@@ -16,7 +15,6 @@ return {
 
   -- Completion and Snippets
   require "user.plugins.completion",
-  require "user.plugins.schemastore",
 
   -- LSP and formatting
   require "user.plugins.lspconfig",
@@ -32,7 +30,6 @@ return {
   require "user.plugins.nvim-dap",
   require "user.plugins.nvim-dap-ui",
   require "user.plugins.nvim-dap-virtual-text",
-  require "user.plugins.nvim-dap-projects",
   require "user.plugins.crates",
   require "user.plugins.vimtex",
 

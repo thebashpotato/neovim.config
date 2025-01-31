@@ -22,9 +22,6 @@ config:add_non_lsp_source "black" -- The uncompromising Python code formatter
 config:add_non_lsp_source "isort" -- Python utility / library to sort imports alphabetically and automatically separate them into sections and by type
 config:add_non_lsp_source "just" -- Format your justfile
 config:add_non_lsp_source "shfmt" -- A shell parser, formatter, and interpreter with bash support.
-config:add_non_lsp_source "codespell" -- Codespell finds common misspellings in text files
-config:add_non_lsp_source "markdownlint" -- Markdown style and syntax checker
-config:add_non_lsp_source "dictionary" -- Shows the first available definition for the current word under the cursor.
 
 ---  Debug Adapters (DAPs)
 config:add_debug_adapter "codelldb" -- C/C++/Rust (codelldb)
@@ -34,6 +31,7 @@ config:add_debug_adapter "bash" -- Bash (bash-debug-adpater)
 
 --- Treesitter language parsers (for better and faster syntax highlighting)
 config:add_treesitter_parser "lua"
+config:add_treesitter_parser "luadoc"
 config:add_treesitter_parser "markdown"
 config:add_treesitter_parser "markdown_inline"
 config:add_treesitter_parser "bash"
@@ -41,8 +39,6 @@ config:add_treesitter_parser "python"
 config:add_treesitter_parser "c"
 config:add_treesitter_parser "cpp"
 config:add_treesitter_parser "rust"
-config:add_treesitter_parser "typescript"
-config:add_treesitter_parser "javascript"
 config:add_treesitter_parser "just"
 config:add_treesitter_parser "make"
 config:add_treesitter_parser "cmake"
@@ -55,8 +51,6 @@ config:add_treesitter_parser "gitcommit"
 config:add_treesitter_parser "gitignore"
 config:add_treesitter_parser "toml"
 config:add_treesitter_parser "json"
-config:add_treesitter_parser "json5"
-config:add_treesitter_parser "ron"
 config:add_treesitter_parser "yaml"
 config:add_treesitter_parser "zathurarc"
 config:add_treesitter_parser "xresources"
