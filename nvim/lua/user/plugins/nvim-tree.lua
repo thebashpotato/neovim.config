@@ -26,11 +26,12 @@ function M.config()
     view = {
       width = 35,
       preserve_window_proportions = true,
+      side = "left",
     },
     renderer = {
       root_folder_label = false,
       highlight_git = true,
-      indent_markers = { enable = true },
+      indent_markers = { enable = false },
       icons = {
         glyphs = {
           default = "󰈚",
