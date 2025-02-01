@@ -6,10 +6,9 @@
 <div align="center">
   <img alt="Crates.io" src="https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square">
   <br>
-  <p>A modern <b>neovim</b> config  written in Lua for low level programmers</p>
+  <p>A modular <b>neovim</b> config with a focus on C/C++ and Rust. Python and Lua are supported out of the box.
+    Used professionally every day for the last 3 years in the embedded development field.</p>
 </div>
-
- 
 
 ## Table of Contents
 
@@ -21,14 +20,36 @@
 
 ## Install
 
-1. Get Node/Npm: `curl -fsSL https://fnm.vercel.app/install | bash`
-2. Get Rust: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+1. Get Node/Npm via fnm: `curl -fsSL https://fnm.vercel.app/install | bash`
+    - `fnm install --latest`
 
-### Ubuntu
+### Arch Linux
 
-1. Apt: `sudo apt install build-essential cmake python3-pip luarocks wl-clipboard python3.10-venv codespell clang-tools clang-format clangd bear`
-2. Pip: `pip install pynvim cmake-format --user`
-3. Npm: `npm install -g neovim`
+1. **Pacman**
+```bash
+sudo pacman -S base-devel cmake python-pip luarocks wl-clipboard xlclip python-virtualenv clang python-pynvim rustup
+```
+
+2. **Paru**
+```bash
+paru -S cmake-format cmake-language-server
+```
+
+3. **Steps 1 and 2 together**
+```bash
+paru -S cmake-format cmake-language-server base-devel cmake python-pip luarocks wl-clipboard xlclip python-virtualenv clang python-pynvim rustup cmake-format cmake-language-server
+```
+
+4. **Npm**
+```bash
+npm install -g neovim
+```
+
+5. **Rustup**
+```bash
+rustup component add rust-analyzer
+```
+
 
 ### Neovim Config
 
