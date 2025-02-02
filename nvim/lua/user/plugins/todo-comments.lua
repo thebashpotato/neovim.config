@@ -6,9 +6,8 @@ local M = {
   },
 }
 
--- TODO: Set up keybindings
 function M.config()
-  require "todo-comments".setup()
+  require("todo-comments").setup()
 end
 
 return M

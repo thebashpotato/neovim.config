@@ -88,7 +88,7 @@ function M.config()
       capabilities = M.common_capabilities(),
     }
 
-    -- NOTE: Here the server name must match the name of the lspconfig file,
+    -- Here the server name must match the name of the lspconfig file,
     -- in order for the settings to be loaded
     local require_ok, settings = pcall(require, "user.plugins.lspsettings." .. server)
     if require_ok then
