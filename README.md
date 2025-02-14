@@ -42,7 +42,7 @@ paru -S cmake-format cmake-language-server base-devel cmake python-pip luarocks 
 
 4. **Npm**
 ```bash
-npm install -g neovim
+npm install -g neovim tree-sitter-cli
 ```
 
 5. **Rustup**
