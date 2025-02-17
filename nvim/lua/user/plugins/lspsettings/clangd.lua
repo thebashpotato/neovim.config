@@ -20,12 +20,6 @@ return {
       capabilities = require("cmp_nvim_lsp").default_capabilities(),
       -- -- Compilation settings
       compilationDatabasePath = "build",
-      fallbackFlags = {
-        "-std=c++17",
-        "-Wall",
-        "-Wextra",
-        "-Wpedantic",
-      },
       -- -- File handling
       excludeFilePatterns = {
         "node_modules/*",
