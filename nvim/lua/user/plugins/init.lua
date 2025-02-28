@@ -30,7 +30,6 @@ return {
   require "user.plugins.nvim-dap",
   require "user.plugins.nvim-dap-ui",
   require "user.plugins.nvim-dap-virtual-text",
-  require "user.plugins.crates",
   require "user.plugins.vimtex",
 
   -- Ui + Utils
