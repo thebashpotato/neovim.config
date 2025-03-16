@@ -24,7 +24,7 @@ function M.config()
       update_root = false,
     },
     view = {
-      width = 25,
+      width = 35,
       preserve_window_proportions = true,
       side = "left",
     },
