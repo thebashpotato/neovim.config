@@ -6,14 +6,16 @@ local M = {
 }
 
 function M.config()
+  local icons = require "user.utils.icons"
+
   require("bufferline").setup {
     options = {
       themable = true,
       mode = "tabs",
       tab_size = 20,
-      buffer_close_icon = "",
-      modified_icon = "●",
-      close_icon = "",
+      buffer_close_icon = icons.diagnostics.Error,
+      modified_icon = icons.ui.Circle,
+      close_icon = icons.diagnostics.Error,
       close_command = "Bdelete %d",
       color_icons = true,
       right_mouse_command = "Bdelete! %d",
@@ -26,7 +28,7 @@ function M.config()
       separator_style = "thin",
       diagnostics = "nvim_lsp",
       diagnostics_indicator = function(count, level, diagnostics_dict, context)
-        local icon = level:match "error" and " " or " "
+        local icon = level:match "error" and icons.diagnostics.Error or icons.diagnostics.Warning
         return " " .. icon .. count
       end,
 
