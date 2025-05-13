@@ -4,9 +4,8 @@ local M = {
 
 function M.diagnostics()
   local icons = require "user.utils.icons"
-  -- local buf_clients = vim.lsp.get_clients()
 
-  local buf_clients = vim.lsp.get_active_clients { bufnr = 0 }
+  local buf_clients = vim.lsp.get_clients { bufnr = 0 }
   if #buf_clients == 0 then
     return "" .. icons.diagnostics.BoldHint .. " LSP Inactive"
   end
