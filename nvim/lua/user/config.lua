@@ -1,7 +1,8 @@
 local config = require "user.managers.config_man"
 
 ---  Theme
-config:set_theme "sonokai"
+config:set_theme "onedark"
+
 
 --- Misc plugin configuration
 config:set_toggle_term_direction "horizontal"
