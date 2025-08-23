@@ -1,7 +1,7 @@
 local config = require "user.managers.config_man"
 
 ---  Theme
-config:set_theme "onedark"
+config:set_theme "noctishc"
 
 
 --- Misc plugin configuration
