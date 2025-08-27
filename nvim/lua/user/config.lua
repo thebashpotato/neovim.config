@@ -13,9 +13,9 @@ config:add_lsp_config("pyright", true) -- LSP
 config:add_lsp_config("bashls", true) -- LSP
 config:add_lsp_config("jsonls", true) -- LSP
 config:add_lsp_config("marksman", true) -- LSP
-config:add_lsp_config("clangd", true) -- Lsp + Formatting
+config:add_lsp_config("clangd", false) -- Lsp + Formatting
 config:add_lsp_config("cmake", false) -- LSP + Formatting
-config:add_lsp_config("mesonlsp", true) -- LSP
+config:add_lsp_config("mesonlsp", false) -- LSP
 config:add_lsp_config("rust_analyzer", false) -- LSP + Formatting
 
 --- Non Lsp Sources (Formatters, Linters etc) anything that you would install via null-ls/none-ls

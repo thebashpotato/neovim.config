@@ -11,15 +11,15 @@ return {
         "--fallback-style=Microsoft",
         "--background-index",
         "--pch-storage=memory",
-        "--header-insertion=never",
         "--all-scopes-completion",
+        "--compile-commands-dir=.",
+        "-j=8"
       },
       -- -- LSP-specific settings
       filetypes = { "c", "h", "hpp", "cpp", "objc", "objcpp", "cuda", "proto" },
       single_file_support = true,
       capabilities = require("cmp_nvim_lsp").default_capabilities(),
       -- -- Compilation settings
-      compilationDatabasePath = "build",
       -- -- File handling
       excludeFilePatterns = {
         "node_modules/*",
@@ -28,15 +28,10 @@ return {
         ".git/*",
         "vendor/*",
       },
-      -- -- Project-specific settings
+      -- -- -- Project-specific settings
       diagnostics = {
         onOpen = 1000, -- Limit diagnostics on file open
         onChange = 1000, -- Limit diagnostics on change
-      },
-      -- -- Performance settings
-      index = {
-        threads = 25, -- Adjust based on your CPU
-        trackDependencies = true,
       },
     },
   },
