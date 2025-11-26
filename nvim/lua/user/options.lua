@@ -37,7 +37,6 @@ local options = {
   sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
   guifont = "Hurmit Nerd Font Mono:h12", -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl", -- which "horizontal" keys are allowed to travel to prev/next line
-
 }
 
 vim.o.winborder = "rounded"

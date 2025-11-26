@@ -1,3 +1,5 @@
+---@diagnostic disable: duplicate-doc-field, duplicate-set-field
+
 --- The ConfigManager is used as a single source of truth the user configuration.
 --- It is used through out the configuration to to set up themes, plugins and general neovim options
 ---
@@ -11,14 +13,13 @@
 --- @field private non_lsp_sources string[]: Non lsp sources, which are formatters, linters etc..
 --- @field private tree_sitter_parser string[]: Tree sitter language parsers for better and modern syntax highlighting
 local M = {
-  active_theme = "oxocarbon",
+  active_theme = "nightfox",
   toggle_term_direction = "horizontal",
   supported_themes = {
     "onedark",
     "gruvbox",
     "ayu",
     "kanagawa",
-    "oxocarbon",
     "dracula",
     "tokyonight",
     "doom-one",
@@ -27,6 +28,7 @@ local M = {
     "catpuccin",
     "noctishc",
     "sonokai",
+    "nightfox",
   },
   lsp_configs = {},
   debug_adapters = {},
@@ -35,14 +37,13 @@ local M = {
 }
 
 --- Set the active theme
---- @param name string: Name of the theme the user wants to load, defaults to oxocarbon
+--- @param name string: Name of the theme the user wants to load, defaults to nightfox
 ---
 --- Supported themes:
 ---  * onedark
 ---  * gruvbox
 ---  * ayu
 ---  * kanagawa
----  * oxocarbon
 ---  * dracula
 ---  * tokyonight
 ---  * doom-one
