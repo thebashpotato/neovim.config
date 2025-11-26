@@ -1,9 +1,11 @@
 local M = {
-  "neovim/nvim-lspconfig",
+  "neovim/nvim-lspconfig", -- Still needed for the default server configs
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     {
-      "folke/neodev.nvim",
+      "folke/lazydev.nvim", -- neodev is deprecated, lazydev is the replacement
+      ft = "lua",
+      opts = {},
     },
     {
       "p00f/clangd_extensions.nvim",
@@ -11,21 +13,11 @@ local M = {
   },
 }
 
-local function lsp_keymaps(buffer_number)
-  local opts = { noremap = true, silent = true }
-  vim.api.nvim_buf_set_keymap(buffer_number, "n", "<S-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-end
-
-M.on_attach = function(client, bufnr)
-  lsp_keymaps(bufnr)
-end
-
 function M.common_capabilities()
   local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
   if status_ok then
     return cmp_nvim_lsp.default_capabilities()
   end
-
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities.textDocument.completion.completionItem.snippetSupport = true
   capabilities.textDocument.completion.completionItem.resolveSupport = {
@@ -39,12 +31,11 @@ function M.common_capabilities()
 end
 
 function M.config()
-  local lspconfig = require "lspconfig"
   local icons = require "user.utils.icons"
   local config = require "user.managers.config_man"
   local x = vim.diagnostic.severity
-  local servers = {}
 
+  local servers = {}
   for lsp_config, _ in pairs(config:get_lsp_configs()) do
     table.insert(servers, lsp_config)
   end
@@ -58,7 +49,7 @@ function M.config()
         [x.HINT] = icons.diagnostics.BoldHint,
       },
     },
-    virtual_text = { prefix = "" },
+    virtual_text = { prefix = "" },
     update_in_insert = false,
     underline = true,
     severity_sort = true,
@@ -71,30 +62,38 @@ function M.config()
       prefix = "",
     },
   }
-
   vim.diagnostic.config(default_diagnostic_config)
-  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
-  require("lspconfig.ui.windows").default_options.border = "rounded"
 
+  -- These handlers are now configured differently in 0.11+
+  -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+  -- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
+
+  -- LspAttach autocmd replaces on_attach
+  vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+      local bufnr = args.buf
+      local opts = { noremap = true, silent = true, buffer = bufnr }
+      vim.keymap.set("n", "<S-k>", vim.lsp.buf.hover, opts)
+    end,
+  })
+
+  -- Set default capabilities for all servers
+  vim.lsp.config("*", {
+    capabilities = M.common_capabilities(),
+  })
+
+  -- Configure each server
   for _, server in pairs(servers) do
-    local opts = {
-      on_attach = M.on_attach,
-      capabilities = M.common_capabilities(),
-    }
+    local opts = {}
 
-    -- Here the server name must match the name of the lspconfig file,
-    -- in order for the settings to be loaded
+    -- Load server-specific settings if they exist
     local require_ok, settings = pcall(require, "user.plugins.lspsettings." .. server)
     if require_ok then
-      opts = vim.tbl_deep_extend("force", settings, opts)
+      opts = settings
     end
 
-    if server == "lua_ls" then
-      require("neodev").setup()
-    end
-
-    lspconfig[server].setup(opts)
+    vim.lsp.config(server, opts)
+    vim.lsp.enable(server)
   end
 end
 

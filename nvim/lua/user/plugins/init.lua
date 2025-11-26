@@ -26,7 +26,6 @@ return {
   require "user.plugins.mason-nvim-dap",
 
   -- Debugging / Development
-  require "user.plugins.neodev",
   require "user.plugins.nvim-dap",
   require "user.plugins.nvim-dap-ui",
   require "user.plugins.nvim-dap-virtual-text",
